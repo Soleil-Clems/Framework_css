@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framework CSS</title>
+  <link rel="stylesheet" href="./sass/main.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navbar ">
+        <a href="#" class="logo">Logo</a>
+        <ul class="nav-links ">
+          <li class="tab-item active" data-target="#tab1"><a href="#" class="active">Home</a></li>
+          <li class="tab-item" data-target="#tab2"><a href="#">About</a></li>
+          <li class="tab-item" data-target="#tab3"><a href="#">Contact</a></li>
+          <li class="dropdown tab-item" data-target="#tab4">
+            <a href="#" class="dropdown-btn">Dropdown</a>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+        <div class="search-box">
+          <input type="text" placeholder="Search">
+          <button type="submit">Search</button>
+        </div>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="container-sm gd-start">
+      <div class="row">
+        <div class="square col-6 order-9 text-light bg-dark">1</div>
+        <div class="square col-3 ">2</div>
+        <div class="square col-3">3</div>
+      </div>
+      <div class="r gd-flow-col gd-center">
+        <div class="square col-3">5</div>
+        <div class="square col-1 order-2">6</div>
+        <div class="square col-2 bg-muted">7</div>
+      </div>
+    </div>
+
+    <button class="tooltip btn-success disabled" title="Texte de l'info-bulle" data-placement="top">button</button>
+    <button class="tooltip btn active text-muted" title="Texte de l'info-bulle" data-placement="bottom">button</button>
+    <button class="tooltip btn-info btn-sm" title="Texte de l'info-bulle" data-placement="right">button</button>
+    <button class="tooltip btn-warning btn-xs" title="Texte de l'info-bulle" data-placement="left">button</button>
+
+
+    <div class="container-img visible-lg hidden-sm">
+      <img src="j.png" class="img-sm" alt="">
+    </div>
+    <div class="container-img visible-md hidden-sm">
+      <img src="img.jpg" class="img-responsive img-thumbnail" alt="">
+    </div><br><br><br>
+    <div class="container-img visible-lg hidden-md">
+      <img src="img.jpg" class="img-responsive img-rounded-lg" alt="">
+    </div>
+    <div class="container-img visible-lg hidden-md">
+      <img src="img.jpg" class="img-responsive img-circle img-thumbnail" alt="">44
+    </div>
+
+    <div class="alert-primary">Mon alert</div>
+    <button class="open-modal btn-success" data-target="#myModal">Open Popin</button>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">x</span>
+        <h2>Vincent met moi juste mes 20/20 stp</h2>
+        <p>Avec ca j'aurai mon Grade A.</p>
+      </div>
+    </div><br>
+
+    <div class="tab-container">
+      <ul class="tab-list">
+        <li class="tab-item active" data-target="#tab1">Onglet 1</li>
+        <li class="tab-item" data-target="#tab2">Onglet 2</li>
+        <li class="tab-item" data-target="#tab3">Onglet 3</li>
+      </ul>
+
+
+
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane active">Contenu de l'onglet 1</div>
+        <div id="tab2" class="tab-pane">Contenu de l'onglet 2</div>
+        <div id="tab3" class="tab-pane">Contenu de l'onglet 3</div>
+      </div>
+    </div>
+
+    <div class="body-carousel">
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper">
+              <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+              <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+          </li>
+          <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+          </ol>
+        </aside>
+      </section>
+    </div>
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/tooltip.js"></script>
+  <script src="./js/onglet.js"></script>
+  <script src="./js/carousel.js"></script>
+  <script src="./js/modal.js"></script>
+</body>
+
+</html>

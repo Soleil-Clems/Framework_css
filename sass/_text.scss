@@ -1,0 +1,113 @@
+@mixin textColor{
+    .text-primary{
+        color:$primary;
+    }
+    .text-success{
+        color:$success;
+    }
+    .text-info{
+        color:$info;
+    }
+    .text-warning{
+        color:$warning;
+    }
+    .text-error{
+        color:$error;
+    }
+
+    .text-light{
+        color:$light;
+    }
+
+    .text-muted{
+        color:$muted;
+    }
+
+    .text-dark{
+        color:$dark;
+    }
+
+    .bg-primary{
+        background-color:$primary;
+        
+    }
+    .bg-success{
+        background-color:$success;
+    }
+    .bg-info{
+        background-color:$info;
+    }
+    .bg-warning{
+        background-color:$warning;
+    }
+    .bg-error{
+        background-color:$error;
+    }
+    .bg-light{
+        background-color:$light;
+    }
+    .bg-dark{
+        background-color:$dark;
+    }
+    .bg-muted{
+        background-color:$muted;
+    }
+
+
+}
+
+
+@mixin alert{
+    .alert {
+        position: relative;
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+
+    .alert-primary {
+        @extend .alert;
+        color: #084298;
+        background-color: #cfe2ff;
+        border-color: #b6d4fe;
+    }
+
+    .alert-secondary {
+        @extend .alert;
+        color: #41464b;
+        background-color: #e2e3e5;
+        border-color: #d3d6d8;
+    }
+    .alert-success {
+        @extend .alert;
+        color: #0f5132;
+        background-color: #d1e7dd;
+        border-color: #badbcc;
+    }
+    .alert-error {
+        @extend .alert;
+        color: #842029;
+        background-color: #f8d7da;
+        border-color: #f5c2c7;
+    }
+    .alert-warning {
+        @extend .alert;
+        color: #664d03;
+        background-color: #fff3cd;
+        border-color: #ffecb5;
+    }
+    .alert-light {
+        @extend .alert;
+        color: #636464;
+        background-color: #fefefe;
+        border-color: #fdfdfe;
+    }
+    
+    .alert-dark {
+        @extend .alert;
+        color: #141619;
+        background-color: #d3d3d4;
+        border-color: #bcbebf;
+    }
+}

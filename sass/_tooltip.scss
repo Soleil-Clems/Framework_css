@@ -1,0 +1,46 @@
+@mixin tooltip {
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip-text {
+        visibility: hidden;
+        width: 120px;
+        background-color: black !important;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .tooltip:hover .tooltip-text {
+        visibility: visible;
+    }
+
+    [data-placement="top"] .tooltip-text {
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    [data-placement="bottom"] .tooltip-text {
+        top: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    [data-placement="left"] .tooltip-text {
+        top: 50%;
+        right: 125%;
+        transform: translateY(-50%);
+    }
+
+    [data-placement="right"] .tooltip-text {
+        top: 50%;
+        left: 125%;
+        transform: translateY(-50%);
+    }
+}

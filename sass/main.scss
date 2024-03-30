@@ -1,0 +1,88 @@
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$error: #dc3545;
+$warning: #ffc107;
+$info: #0dcaf0;
+$dark: #212529;
+$light: #f8f9fa;
+$muted: #fffccf;
+@import "button";
+@import "screen";
+@import "container";
+@import "image";
+@import "text";
+@import "tooltip";
+@import "carousel";
+@import "navbar";
+@import "onglet";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+// ==================CONTAINER SECTION============================================
+
+.container {
+  @include container;
+}
+
+.container-fluid {
+  @include container;
+  width: 100%;
+}
+
+.container-img {
+  width: 400px;
+  @include container;
+  @include imgResponsive;
+}
+
+.square {
+  height: 50px;
+  background: $light;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background: teal;
+  @include col;
+  @include column;
+  @include order;
+}
+.r {
+  @include order;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.gd-flow-col {
+  grid-auto-flow: column;
+}
+
+
+
+
+// ===============================Button section ========================
+
+@include screenSize;
+@include align;
+@include createContainer;
+@include classBtn;
+@include textColor;
+@include alert;

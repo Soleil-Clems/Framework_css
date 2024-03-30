@@ -1,0 +1,161 @@
+@mixin defaultBtn ($color) {
+    @include defaultBtnSize("");
+    border-radius: 5px;
+    @if $color== light {
+        color : $dark;
+        background: $light;
+        border: solid 1px $light;
+
+    }
+    @else if $color == link{
+        color : $primary;
+        background: $primary;
+        border: solid 1px $light;
+    }
+    @else{
+        color:white;
+        border: solid 1px $color;
+        background: $color;
+       
+    }
+
+    &:hover{
+        filter: brightness(90%);
+    
+    }
+
+    &.active{
+        box-shadow:2px 2px 5px rgba(0,0,0,.5), -2px -2px 5px rgba(0,0,0,.5);
+    }
+    
+    &.disabled{
+        filter: opacity(40%);
+    }
+}
+@mixin defaultBtnSize ($size) {
+    @include tooltip;
+    @if $size== xs {
+        padding: .2em;
+        font-size: 12px;
+
+    }
+    @else if $size== sm {
+        padding: .4em;
+        font-size: 14px;
+
+    }
+    @else if $size== lg {
+        padding: .5em 1em;
+        font-size: 1.3em;
+
+       
+    }
+    @else{
+        padding: .5em 1em;
+        font-size: 1em;
+    }
+
+}
+
+
+$colors: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    error: $error,
+    warning: $warning,
+    link: $light,
+    info: $info,
+    dark: $dark,
+    light: $light
+);
+
+@mixin classBtn {
+    .btn {
+        @include defaultBtn($secondary);
+        @include defaultBtnSize ('');
+    }
+   
+    .btn-primary{
+        @include defaultBtn($primary);
+        @include defaultBtnSize("");
+    }
+
+    .btn-secondary{
+        @include defaultBtn($secondary);
+    }
+    .btn-muted{
+        @include defaultBtn($muted);
+    }
+    .btn-success{
+        @include defaultBtn($success);
+    }
+    .btn-error{
+        @include defaultBtn($error);
+    }
+    .btn-warning{
+        @include defaultBtn($warning);
+    }
+    .btn-link{
+        @include defaultBtn("link");
+    }
+    .btn-info{
+        @include defaultBtn($info);
+    }
+    .btn-dark{
+        @include defaultBtn($dark);
+    }
+    .btn-light{
+        @include defaultBtn('light');
+    }
+
+    .btn-xs{
+        @include defaultBtnSize("xs");
+    }
+   
+    .btn-lg {
+        @include defaultBtnSize("lg");
+    }
+    .btn-sm {
+        @include defaultBtnSize("sm");
+    }
+
+}
+
+.open-modal{
+    margin-block: .5em;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999999999999999;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

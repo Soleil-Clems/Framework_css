@@ -1,0 +1,56 @@
+@mixin imgResponsive {
+    .img-fluid {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    .img-responsive {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .img-rounded {
+        border-radius: 2px;
+    }
+
+    .img-rounded-md {
+        border-radius: 7px;
+    }
+
+    .img-rounded-lg {
+        border-radius: 10px;
+    }
+
+    .img-circle {
+        border-radius: 50%;
+    }
+
+    .img-thumbnail {
+        border: 1px silver solid;
+        padding: 5px;
+    }
+
+    .img-thumbnail-md {
+        border: 1px silver solid;
+        padding: 10px;
+    }
+
+    .img-thumbnail-lg {
+        border: 1px silver solid;
+        padding: 1em;
+    }
+
+    .img-blur{
+        filter:blur(1px)
+    }
+
+    .img-blur-md{
+        filter:blur(3px)
+    }
+
+    .img-blur-lg{
+        filter:blur(5px)
+    }
+}
